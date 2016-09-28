@@ -14,7 +14,7 @@ export class SearchService{
   }
 
   searchClass(str:string, term:string){
-    this.searchUrl = 'http://curriculum.ptg.csun.edu/api/terms/'+term+'/courses/'+str;
+    this.searchUrl = 'http://curriculum.ptg.csun.edu/api/terms/'+term+'/classes/'+str;
     return this._http.get(this.searchUrl)
         .map(res=>res.json());
   }

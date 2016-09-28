@@ -1,7 +1,7 @@
 <form name="myForm">
   <label for="searchStr">Search: </label>
   <div class="form-group">
-    <input type="text" name="searchStr"[(ngModel)]="searchStr" (keyup)="searchClass()" class="form-control" placeholder="Search class....">
+    <input type="text" name="searchStr"[(ngModel)]="searchStr" (keyup.enter)="searchClass()" class="form-control" placeholder="Search class....">
   </div>
 
     <!-- Goes all the way back to 2013 and includes summer classes. -->
@@ -26,7 +26,7 @@
           <p>
             {{res.description}}
           </p>
-
+            <p>{{res.instructors[0].instructor}}</p>
         </div>
 
       </div>

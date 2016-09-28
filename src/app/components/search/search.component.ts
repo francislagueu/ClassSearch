@@ -33,7 +33,7 @@ export class SearchComponent {
   searchClass(){
     this._searchService.searchClass(this.searchStr, this.model.term)
         .subscribe(res=>{
-          this.searchRes = res.courses;
+          this.searchRes = res.classes;
           console.log(this.searchRes);
         })
   }

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {SearchComponent} from './components/search/search.component';
+import {FilterComponent} from './components/filter/filter.component';
 import {SearchService} from './services/search.service';
 
 @NgModule({
@@ -15,7 +16,8 @@ import {SearchService} from './services/search.service';
     AppComponent,
     FooterComponent,
     NavbarComponent,
-    SearchComponent
+    SearchComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
