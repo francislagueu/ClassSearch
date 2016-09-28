@@ -1,3 +1,4 @@
+// How to compile Javascript to TypeScript
 {
   "compilerOptions": {
     "declaration": false,

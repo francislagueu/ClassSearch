@@ -1,8 +1,18 @@
-<form >
+<form name="myForm">
+  <label for="searchStr">Search: </label>
   <div class="form-group">
-    <input type="text" name="searchStr"[(ngModel)]="searchStr" (keyup)="searchClass()" class="form-control" placeholder="Seach class....">
+    <input type="text" name="searchStr"[(ngModel)]="searchStr" (keyup)="searchClass()" class="form-control" placeholder="Search class....">
   </div>
 
+    <!-- Goes all the way back to 2013 and includes summer classes. -->
+  <div class="form-group">
+    <label for="term">Term: </label>
+    <select class="form-control" id="term" 
+          required
+          [(ngModel)]="model.term" name="term">
+        <option *ngFor="let t of terms" [value]="t">{{t}}</option>
+    </select>
+  </div>
 </form>
 
 <div *ngIf="searchRes">
@@ -12,6 +22,7 @@
         <div class="search-res well">
           <h4><a routerLink="/classes/{{res.course_id}}">{{res.subject}} - {{res.catalog_number}} ({{res.title}}): {{res.units}} units</a>
           </h4>
+          <h5><b>{{res.term}}</b></h5>
           <p>
             {{res.description}}
           </p>
