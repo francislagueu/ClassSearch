@@ -18,7 +18,7 @@ import {ClassComponent} from './components/class/class.component';
     FooterComponent,
     NavbarComponent,
     SearchComponent,
-    ClassComponent
+    ClassComponent,
     FilterComponent
   ],
   imports: [

@@ -25,6 +25,7 @@ export class SearchService{
         .map(res=>res.json());
   }
 
+/*
   searchInstructor(name:string, type='instructor')
   {
     var split = name.toLowerCase().split(" ", 2);
@@ -32,6 +33,7 @@ export class SearchService{
     return this._http.get(this.instructorUrl)
         .map(res=>res.json());
   }
+  */
 
   getInstructor(str:string){
     this.instructorUrl = 'http://curriculum.ptg.csun.edu/api/classes?instructor='+str;
