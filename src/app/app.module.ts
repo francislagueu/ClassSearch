@@ -10,6 +10,7 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 import {SearchComponent} from './components/search/search.component';
 import {FilterComponent} from './components/filter/filter.component';
 import {SearchService} from './services/search.service';
+import {ClassComponent} from './components/class/class.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {SearchService} from './services/search.service';
     FooterComponent,
     NavbarComponent,
     SearchComponent,
+    ClassComponent
     FilterComponent
   ],
   imports: [

@@ -1,9 +1,8 @@
-// Handle module loading:
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {SearchService} from '../../services/search.service';
-import {Class} from '../../../Class';
-import {Instructor} from '../../../Instructor';
-import {AutoGrow} from '../../components/auto-grow/auto-grow.directive';
+import {Class} from '../../../CLass';
+import {ActivatedRoute} from '@angular/router';
+import {FormGroup, FormControl} from '@angular/forms';
 
 // Decorator:
 @Component({
@@ -14,10 +13,9 @@ import {AutoGrow} from '../../components/auto-grow/auto-grow.directive';
   providers: [SearchService]
   //declarations:[AutoGrow]
 })
-
-// Class definition, exporting to have this class be available to other modules:
-export class SearchComponent {
+export class SearchComponent{
   searchStr:string;
+  term:any;
   searchRes:Class[];
 
   terms = ['Fall-2016', 'Summer-2016', 'Spring-2016', 'Fall-2015', 'Summer-2015', 'Spring-2015', 'Fall-2014', 'Summer-2014', 'Spring-2014', 'Fall-2013', 'Summer-2013', 'Spring-2013'];
@@ -28,6 +26,12 @@ export class SearchComponent {
 
   constructor(private _searchService: SearchService){
     //this.instructor = SearchService.searchInstructor();
+  }
+
+  ngOnInit(){
+    this.term = new FormGroup({
+      'term' : new FormControl('')
+    });
   }
 
   searchClass(){

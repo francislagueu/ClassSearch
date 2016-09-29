@@ -20,7 +20,7 @@ export class SearchService{
   }
 
   getClass(id:string){
-    this.classUrl = 'http://curriculum.ptg.csun.edu/api/courses/'+id;
+    this.classUrl = 'http://curriculum.ptg.csun.edu/api/classes/'+id;
     return this._http.get(this.classUrl)
         .map(res=>res.json());
   }
@@ -29,6 +29,12 @@ export class SearchService{
   {
     var split = name.toLowerCase().split(" ", 2);
     this.instructorUrl = 'http://curriculum.ptg.csun.edu/api/classes?instructor='+split[0] +'.'+split[1]+"@csun.edu";
+    return this._http.get(this.instructorUrl)
+        .map(res=>res.json());
+  }
+
+  getInstructor(str:string){
+    this.instructorUrl = 'http://curriculum.ptg.csun.edu/api/classes?instructor='+str;
     return this._http.get(this.instructorUrl)
         .map(res=>res.json());
   }
