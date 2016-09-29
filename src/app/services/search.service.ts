@@ -13,15 +13,21 @@ export class SearchService{
 
   }
 
-  searchClass(str:string, type='classes'){
-    this.searchUrl = 'http://curriculum.ptg.csun.edu/api/courses/'+str;
+  searchClass(str:string, term:string){
+    this.searchUrl = 'http://curriculum.ptg.csun.edu/api/terms/'+ term +'/classes/'+str;
     return this._http.get(this.searchUrl)
         .map(res=>res.json());
   }
 
   getClass(id:string){
-    this.classUrl = 'http://curriculum.ptg.csun.edu/api/courses/'+id;
+    this.classUrl = 'http://curriculum.ptg.csun.edu/api/classes/'+id;
     return this._http.get(this.classUrl)
+        .map(res=>res.json());
+  }
+
+  getInstructor(str:string){
+    this.instructorUrl = 'http://curriculum.ptg.csun.edu/api/classes?instructor='+str;
+    return this._http.get(this.instructorUrl)
         .map(res=>res.json());
   }
 

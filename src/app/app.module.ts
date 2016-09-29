@@ -9,13 +9,15 @@ import {FooterComponent} from './components/footer/footer.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {SearchComponent} from './components/search/search.component';
 import {SearchService} from './services/search.service';
+import {ClassComponent} from './components/class/class.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     NavbarComponent,
-    SearchComponent
+    SearchComponent,
+    ClassComponent
   ],
   imports: [
     BrowserModule,

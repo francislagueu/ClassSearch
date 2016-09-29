@@ -1,0 +1,20 @@
+{
+  "name": "class-search",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Francis <lagson6@yahoo.fr>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/francislagueu/ClassSearch",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "metaphor": "^0.8.0"
+  }
+}
