@@ -1,4 +1,5 @@
 <form #myForm="ngForm" (ngSubmit) = "searchClass()">
+
 <div class="form-group">
  <!-- Goes all the way back to 2013 and includes summer classes. -->
   <label for="term" class="col-sm-2">Term </label>
@@ -15,14 +16,16 @@
     <input required type="text" name="searchStr"[(ngModel)]="searchStr" (keyup.enter)="searchClass()" class="form-control" placeholder="Search by class (e.g biol or biol-110)">
   </div>
   </div>
-
+  
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10" >
     <button type="submit" >Search Class</button>
   </div>
   </div>
 </form>
-
+<!--The filter button-->
+<filter></filter>
+<!--The filter button-->
 <div *ngIf="searchRes">
   <div *ngFor="let res of searchRes">
     <div class="row">

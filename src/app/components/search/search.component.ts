@@ -3,6 +3,7 @@ import {SearchService} from '../../services/search.service';
 import {Class} from '../../../CLass';
 import {ActivatedRoute} from '@angular/router';
 import {FormGroup, FormControl} from '@angular/forms';
+import {FilterComponent} from '../filter/filter.component';
 
 // Decorator:
 @Component({

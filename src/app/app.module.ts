@@ -11,6 +11,7 @@ import {SearchComponent} from './components/search/search.component';
 import {FilterComponent} from './components/filter/filter.component';
 import {SearchService} from './services/search.service';
 import {ClassComponent} from './components/class/class.component';
+import { SidebarModule } from 'ng2-sidebar';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {ClassComponent} from './components/class/class.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    SidebarModule
   ],
   providers: [SearchService],
   bootstrap: [AppComponent]

@@ -1,2 +1,27 @@
-<div>
-</div>
+<ng2-sidebar
+      [(open)]="_open"
+      [defaultStyles]="true"
+      [position]="_POSITIONS[_positionNum]"
+      [closeOnClickOutside]="_closeOnClickOutside"
+      [showOverlay]="_showOverlay"
+      [animate]="_animate"
+      [sidebarClass]="'demo-sidebar'"
+      [ariaLabel]="'My sidebar'"
+      (onOpen)="_onOpen()"
+      (onClose)="_onClose()">
+      <p>Sidebar contents</p>
+
+      <button class="filter-control" (click)="_toggleSidebar()">Close filter</button>
+      <p><a closeSidebar>This will close the sidebar too</a></p>
+    </ng2-sidebar>
+    <header class="filter-control">
+        <button (click)="_toggleSidebar()" class="Filter_toggle">Filter</button>
+    </header>
+    <!--<section class="filter-contents">
+      <h1>Controls</h1>
+      <button class="filter-control" (click)="_toggleSidebar()">Toggle open ({{_open}})</button>
+      <button class="filter-control" (click)="_togglePosition()">Toggle position ({{_POSITIONS[_positionNum]}})</button>
+      <button class="filter-control" (click)="_toggleCloseOnClickOutside()">Toggle closeOnClickOutside ({{_closeOnClickOutside}})</button>
+      <button class="filter-control" (click)="_toggleShowOverlay()">Toggle showOverlay ({{_showOverlay}})</button>
+      <button class="filter-control" (click)="_toggleAnimate()">Toggle animations ({{_animate}})</button>
+    </section>  -->
