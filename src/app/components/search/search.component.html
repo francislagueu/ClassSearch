@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <form name="myForm" class="form-horizontal">
 
 
@@ -7,11 +8,24 @@
 
     <div class="col-sm-10">
     <select class="form-control" id="term"
+=======
+<form #myForm="ngForm" (ngSubmit) = "searchClass()"> 
+<div class="form-group">
+ <!-- Goes all the way back to 2013 and includes summer classes. -->
+  <label for="term">Term: </label>
+    <select class="form-control" id="term" 
+>>>>>>> c702ddcba022073dc2f1586209f4b692a04cecb6
           required
           [(ngModel)]="model.term" name="term">
         <option *ngFor="let t of terms" [value]="t">{{t}}</option>
     </select>
+</div>
+
+<div class="form-group">
+  <label for="searchStr">Search: </label>
+    <input required type="text" name="searchStr"[(ngModel)]="searchStr" (keyup.enter)="searchClass()" class="form-control" placeholder="Search class....">
   </div>
+<<<<<<< HEAD
   </div>
 
   <div class="form-group">
@@ -21,6 +35,12 @@
     </div>
   </div>
 
+=======
+
+    <div class="form-group"> 
+    <button type="submit" >Search Class</button> 
+  </div> 
+>>>>>>> c702ddcba022073dc2f1586209f4b692a04cecb6
 </form>
 
 <div *ngIf="searchRes">
@@ -34,7 +54,7 @@
           <p>
             {{res.description}}
           </p>
-            <p>{{res.instructors[0].instructor}}</p>
+           <!-- <p>{{res.instructors[0].instructor}}</p> -->
         </div>
 
       </div>
