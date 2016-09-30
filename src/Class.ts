@@ -1,10 +1,9 @@
 export class Class{
-  //id:number;
-  //term:string;
+  term:string;
 
-  constructor(
-    //public id: number,
-    public term: string
-  ) { }
+  constructor(passedTerm: string) 
+  { 
+    this.term = passedTerm;
+  }
 
 }

@@ -2,7 +2,7 @@
 <div class="form-group">
  <!-- Goes all the way back to 2013 and includes summer classes. -->
   <label for="term">Term: </label>
-    <select class="form-control" id="term" 
+    <select id="term" 
           required
           [(ngModel)]="model.term" name="term">
         <option *ngFor="let t of terms" [value]="t">{{t}}</option>
@@ -11,7 +11,7 @@
 
 <div class="form-group">
   <label for="searchStr">Search: </label>
-    <input required type="text" name="searchStr"[(ngModel)]="searchStr" (keyup.enter)="searchClass()" class="form-control" placeholder="Search class....">
+    <input required type="text" name="searchStr"[(ngModel)]="searchStr" (keyup.enter)="searchClass()" class="form-control" placeholder="Search by class (e.g biol or biol-110)">
   </div>
 
     <div class="form-group"> 
@@ -30,7 +30,12 @@
           <p>
             {{res.description}}
           </p>
-           <!-- <p>{{res.instructors[0].instructor}}</p> -->
+           <p> 
+             <strong>Instructor: </strong> {{res.instructors[0].instructor}} 
+          </p>
+          <p>
+            <strong>Meeting days: </strong>{{res.meetings[0].days}}
+          </p>
         </div>
 
       </div>
