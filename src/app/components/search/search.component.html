@@ -1,15 +1,9 @@
 
 <form #myForm="ngForm" (ngSubmit) = "searchClass()">
-  <div class="form-group">
-    <select name = "term" class="form-control" ngControl="term" required [(ngModel)] = "term">
-      <option value="spring-2015">Spring 2015</option>
-      <option value="fall-2015">Fall 2015</option>
-      <option value="spring-2016">Spring 2016</option>
-      <option value="fall-2015">Fall 2016</option>
-    </select>
-  </div>
+  
   <div class="form-group">
     <input required type="text" name="searchStr"[(ngModel)]="searchStr" class="form-control" placeholder="Seach class....">
+
   </div>
   <div class="form-group">
     <button type="submit" >Search Class</button>
