@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 import {SearchService} from '../../services/search.service';
 import {Class} from '../../../Class';
 import {ActivatedRoute} from '@angular/router';
+import {SearchComponent} from '../search/search.component';
 
 @Component({
   selector: 'class',
@@ -12,7 +13,7 @@ import {ActivatedRoute} from '@angular/router';
 export class ClassComponent{
   id:string;
   term:string;
-  classes:any;
+  @Input()classes: Object;
 
   constructor(private _searchService: SearchService,
               private _route: ActivatedRoute){

@@ -8,6 +8,7 @@ import {FormGroup, FormControl} from '@angular/forms';
 @Component({
   // Attributes:
   selector: 'search', //CSS selector for a host HTML element.
+  inputs: ['obj'],
   templateUrl: './search.component.html', // Specifies HTML to be inserted into the DOM when the component's view is rendered.
   styleUrls: ['./search.component.css'],
   providers: [SearchService]
@@ -17,7 +18,7 @@ export class SearchComponent{
   searchStr:string;
   term:any;
   searchRes:Class[];
-  obj:any[];
+  obj : {};
 
 
   terms = ['Fall-2016', 'Summer-2016', 'Spring-2016', 'Fall-2015', 'Summer-2015', 'Spring-2015', 'Fall-2014', 'Summer-2014', 'Spring-2014', 'Fall-2013', 'Summer-2013', 'Spring-2013'];

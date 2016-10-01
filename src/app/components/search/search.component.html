@@ -24,7 +24,7 @@
 </form>
 
 <div *ngIf="searchRes">
-  <div *ngFor="let res of searchRes">
+  <div *ngFor="let res of searchRes" [obj]= 'res'>
     <div class="row">
       <div class="col-md-12">
         <div class="search-res well">
