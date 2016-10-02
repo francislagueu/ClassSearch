@@ -40,5 +40,4 @@ export class SearchService{
     return this._http.get(this.instructorUrl)
         .map(res=>res.json());
   }
-
 }
