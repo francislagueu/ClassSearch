@@ -16,7 +16,7 @@
     <input required type="text" name="searchStr"[(ngModel)]="searchStr" (keyup.enter)="searchClass()" class="form-control" placeholder="Search by class (e.g biol or biol-110)">
   </div>
   </div>
-  
+
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10" >
     <button type="submit" >Search Class</button>
@@ -37,10 +37,10 @@
           <p>
             {{res.description}}
           </p>
-           <p>
-             <strong>Instructor: </strong> {{res.instructors[0].instructor}}
+           <p *ngIf="res.instructors.length > 0" >
+             <strong >Instructor: </strong> {{res.instructors[0].instructor}}
           </p>
-          <p>
+          <p *ngIf="res.meetings[0].days" >
             <strong>Meeting days: </strong>{{res.meetings[0].days}}
           </p>
         </div>

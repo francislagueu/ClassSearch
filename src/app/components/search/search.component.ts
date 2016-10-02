@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SearchService} from '../../services/search.service';
-import {Class} from '../../../CLass';
+import {Class} from '../../../Class';
+import {Classes} from '../../../Classes';
 import {ActivatedRoute} from '@angular/router';
 import {FormGroup, FormControl} from '@angular/forms';
 import {FilterComponent} from '../filter/filter.component';
@@ -18,7 +19,8 @@ export class SearchComponent{
   searchStr:string;
   term:any;
   searchRes:Class[];
-  obj:any[];
+  classObj = [];
+
 
 
   terms = ['Fall-2016', 'Summer-2016', 'Spring-2016', 'Fall-2015', 'Summer-2015', 'Spring-2015', 'Fall-2014', 'Summer-2014', 'Spring-2014', 'Fall-2013', 'Summer-2013', 'Spring-2013'];
@@ -40,12 +42,15 @@ export class SearchComponent{
   searchClass(){
     this._searchService.searchClass(this.searchStr, this.model.term)
         .subscribe(res=>{
-          this.obj = this.searchRes = res.classes;
+          this.searchRes = res.classes;
 
 
 
           for(var i = 0; i< this.searchRes.length; i++){
             console.log(this.searchRes[i]);
+            let obj = this.searchRes[i];
+            this.classObj.push(obj);
+            console.log(this.classObj[i]);
           }
         });
         //this.printClass(this.searchClass);
