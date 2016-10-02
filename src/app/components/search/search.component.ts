@@ -63,4 +63,5 @@ export class SearchComponent{
   //     if(searchRes[i].catalog_number === '100')
   //     console.log(this.searchRes[i]);
   //   }
-  /
+//}
+}
