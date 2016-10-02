@@ -1,4 +1,5 @@
-<div class="" *ngIf="classes">
-  {{classes.subject}}
-
+<div *ngIf="ClassObj.length > 0">
+  <div class="" *ngFor="let item of ClassObj">
+    {{item.subject}}
+  </div>
 </div>
