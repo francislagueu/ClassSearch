@@ -4,7 +4,6 @@ import {Class} from '../../../Class';
 import {Classes} from '../../../Classes';
 import {ActivatedRoute} from '@angular/router';
 import {FormGroup, FormControl} from '@angular/forms';
-import {FilterComponent} from '../filter/filter.component';
 
 // Decorator:
 @Component({
@@ -20,6 +19,7 @@ export class SearchComponent{
   term:any;
   searchRes:Class[];
   classObj = [];
+  currentClass: Classes;
 
 
 
@@ -53,15 +53,7 @@ export class SearchComponent{
             console.log(this.classObj[i]);
           }
         });
-        //this.printClass(this.searchClass);
 
   }
-
-  // printClass(this.searchRes){
-  //     console.log('classes');
-  //   for(var i = 0; i< this.searchRes.length; i++){
-  //     if(searchRes[i].catalog_number === '100')
-  //     console.log(this.searchRes[i]);
-  //   }
-//}
+ 
 }

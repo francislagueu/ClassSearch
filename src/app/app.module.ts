@@ -8,10 +8,10 @@ import { AppComponent } from './app.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {SearchComponent} from './components/search/search.component';
-import {FilterComponent} from './components/filter/filter.component';
 import {SearchService} from './services/search.service';
 import {ClassComponent} from './components/class/class.component';
-import { SidebarModule } from 'ng2-sidebar';
+import {ClassDetailsComponent} from './components/classDetails/classDetails.component';
+
 
 @NgModule({
   declarations: [
@@ -20,14 +20,13 @@ import { SidebarModule } from 'ng2-sidebar';
     NavbarComponent,
     SearchComponent,
     ClassComponent,
-    FilterComponent
+    ClassDetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing,
-    SidebarModule
+    routing
   ],
   providers: [SearchService],
   bootstrap: [AppComponent]

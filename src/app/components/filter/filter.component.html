@@ -1,27 +1,23 @@
-<ng2-sidebar
-      [(open)]="_open"
-      [defaultStyles]="true"
-      [position]="_POSITIONS[_positionNum]"
-      [closeOnClickOutside]="_closeOnClickOutside"
-      [showOverlay]="_showOverlay"
-      [animate]="_animate"
-      [sidebarClass]="'demo-sidebar'"
-      [ariaLabel]="'My sidebar'"
-      (onOpen)="_onOpen()"
-      (onClose)="_onClose()">
-      <p>Sidebar contents</p>
-
-      <button class="filter-control" (click)="_toggleSidebar()">Close filter</button>
-      <p><a closeSidebar>This will close the sidebar too</a></p>
-    </ng2-sidebar>
-    <header class="filter-control">
-        <button (click)="_toggleSidebar()" class="Filter_toggle">Filter</button>
-    </header>
-    <!--<section class="filter-contents">
-      <h1>Controls</h1>
-      <button class="filter-control" (click)="_toggleSidebar()">Toggle open ({{_open}})</button>
-      <button class="filter-control" (click)="_togglePosition()">Toggle position ({{_POSITIONS[_positionNum]}})</button>
-      <button class="filter-control" (click)="_toggleCloseOnClickOutside()">Toggle closeOnClickOutside ({{_closeOnClickOutside}})</button>
-      <button class="filter-control" (click)="_toggleShowOverlay()">Toggle showOverlay ({{_showOverlay}})</button>
-      <button class="filter-control" (click)="_toggleAnimate()">Toggle animations ({{_animate}})</button>
-    </section>  -->
+<div>
+    <div>
+        <select>
+            <option value="">{{item.catalog_number}}</option>
+        </select>
+    </div>
+      <div class="container">
+      <LABEL FOR="MON">Monday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="MON" Value="M" checked>
+      <LABEL FOR="TUES">Tuesday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="TUES" Value="T" checked>
+      <LABEL FOR="WED">Wednesday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="WED" Value="W" checked>
+      <LABEL FOR="THUR">Thursday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="THUR" Value="Th" checked>
+      <LABEL FOR="FRI">Friday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="FRI" Value="F" checked>
+      <LABEL FOR="SAT">Saturday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="SAT" Value="Sa" checked>
+      <LABEL FOR="SUN">Sunday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="SUN" Value="S" checked>
+  </div>
+</div>

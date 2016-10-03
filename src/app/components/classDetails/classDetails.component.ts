@@ -7,10 +7,10 @@ import {SearchComponent} from '../search/search.component';
 import {ClassComponent} from '../class/class.component';
 
 @Component({
-  selector: 'filter',
-  templateUrl: './filter.component.html',
+  selector: 'classDetails',
+  templateUrl: './classDetails.component.html',
   inputs:['item']
 })
-export class FilterComponent{
+export class ClassDetailsComponent{
 
 }

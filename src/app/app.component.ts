@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 })
 // Root of our application, its a view component for the entire page.
 export class AppComponent {
-  title = 'app works!';
+
 }

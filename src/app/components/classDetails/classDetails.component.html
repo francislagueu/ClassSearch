@@ -1,8 +1,9 @@
-<div class="row" id="cls">
+<section>
+   <div class="row">
       <div class="col-md-12">
         <div class="search-res well">
-         <a routerLink="/classes/{{item.course_id}}" (click)="showClass(item); searchStr='';" ><h4>{{item.subject}} - {{item.catalog_number}} ({{item.title}}): {{item.units}} units
-          </h4></a>
+          <h4>{{item.subject}} - {{item.catalog_number}} ({{item.title}}): {{item.units}} units
+          </h4>
           <h5><b>{{item.term}}</b></h5>
           <p>
             {{item.description}}
@@ -14,5 +15,6 @@
             <strong>Meeting days: </strong>{{item.meetings[0].days}}
           </p>
         </div>
- </div>
- 
+      </div>
+    </div>
+</section>
