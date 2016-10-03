@@ -1,0 +1,32 @@
+.btn-metaphor {
+  color: #fff;
+    background-color: #CF0A2C;
+    border-color: #b70927;
+}
+
+
+.f-12 {
+  font-size:12px;
+
+}
+
+.center-f {
+  text-align: center;
+}
+
+.m-t-50 {
+  margin-top: 650px;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.link-s {
+
+  color: #000000;
+}

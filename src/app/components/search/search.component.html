@@ -1,37 +1,53 @@
 <form #myForm="ngForm" (ngSubmit) = "searchClass()">
 
-<div class="form-group">
+<div class="form-group ">
+<label for="searchStr" class="col-sm-12 f-50 center-f let-space Lato">Class Search</label>
+<br><br><br><br><br><br>
  <!-- Goes all the way back to 2013 and includes summer classes. -->
-  <label for="term" class="col-sm-2">Term </label>
-  <div class="col-sm-10">
+  <!-- <label for="term" class="col-sm-1">Term </label> -->
+  <div class="col-sm-4 width-z">
+  <label for="term" class="Lato">Term </label>
     <select id="term" required [(ngModel)]="model.term" name="term">
         <option *ngFor="let t of terms" [value]="t">{{t}}</option>
     </select>
   </div>
+ <div class="col-sm-1">
+   <filter class = "link-s Lato"></filter>
+   </div>
 </div>
 
 <div class="form-group">
-  <label for="searchStr" class="col-sm-2">Search </label>
-  <div class="col-sm-10">
-    <input required type="text" name="searchStr"[(ngModel)]="searchStr" (keyup.enter)="searchClass()" class="form-control" placeholder="Search by class (e.g biol or biol-110)">
-  </div>
-  </div>
 
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10" >
-    <button type="submit" >Search Class</button>
-  </div>
-  </div>
+
+      <div class="col-sm-10">
+       <input required type="text" name="searchStr"[(ngModel)]="searchStr" (keyup.enter)="searchClass()" class="form-control" placeholder="Search by class (e.g biol or biol-110)">
+      </div>
+    </div>
+
+    <div class="form-group m-b-2">
+
+
+
+      <div class="col-sm-2 ">
+        <button type="submit" class="btn btn-metaphor Lato ">Search Class</button>
+      </div>
+
+
+    </div>
+
+
 </form>
 <!--The filter button-->
-<filter></filter>
+<!-- <div class="col-sm-12">
+        <filter class = "Lato"></filter>
+      </div> -->
 <!--The filter button-->
 <div *ngIf="searchRes">
   <div *ngFor="let res of searchRes">
     <div class="row">
       <div class="col-md-12">
-        <div class="search-res well">
-          <h4><a routerLink="/classes/{{res.course_id}}">{{res.subject}} - {{res.catalog_number}} ({{res.title}}): {{res.units}} units</a>
+        <div class="search-res well c-w">
+          <h4><a class="link-color" routerLink="/classes/{{res.course_id}}">{{res.subject}} - {{res.catalog_number}} ({{res.title}}): {{res.units}} units</a>
           </h4>
           <h5><b>{{res.term}}</b></h5>
           <p>

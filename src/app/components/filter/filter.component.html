@@ -9,13 +9,16 @@
       [ariaLabel]="'My sidebar'"
       (onOpen)="_onOpen()"
       (onClose)="_onClose()">
-      <p>Sidebar contents</p>
+      <br>
+      <p class="f-12 center-f">Filter Results</p>
 
-      <button class="filter-control" (click)="_toggleSidebar()">Close filter</button>
-      <p><a closeSidebar>This will close the sidebar too</a></p>
+      <div class="col-sm-12">
+      <button class="filter-control btn btn-metaphor center-f m-t-50" (click)="_toggleSidebar()">Close filter</button>
+      </div>
+     <!--  <p class="f-12"><a closeSidebar>This will close the sidebar too</a></p> -->
     </ng2-sidebar>
     <header class="filter-control">
-        <button (click)="_toggleSidebar()" class="Filter_toggle">Filter</button>
+        <a (click)="_toggleSidebar()" class="Filter_toggle link-s" style="cursor:pointer">Filter</a>
     </header>
     <!--<section class="filter-contents">
       <h1>Controls</h1>

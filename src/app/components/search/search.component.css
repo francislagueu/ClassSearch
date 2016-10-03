@@ -1,0 +1,62 @@
+.btn-metaphor {
+  color: #fff;
+    background-color: #CF0A2C;
+    border-color: #b70927;
+}
+
+.Lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.f-50 {
+  color: #6b6b6b;
+  font-size:40px;
+}
+
+
+.center-f {
+  text-align: center;
+}
+
+
+.m-b-2 {
+  padding-bottom:72px;
+}
+
+.link-color {
+  color:#CF0A2C;
+
+}
+
+.c-w {
+  background-color: #fcfcfc;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.let-space{
+  letter-spacing: 1px;
+}
+
+.width-z{
+  width:17% !important;
+}
+
+.margin-s {
+  margin: 0 auto;
+}
+
+.link-s {
+  text-decoration: none;
+  color: #000000;
+}
+
+
+
+
