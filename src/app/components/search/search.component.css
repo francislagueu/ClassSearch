@@ -1,0 +1,7 @@
+.scrollbox {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  height:130px;
+  width:200px;
+  overflow:auto;
+}

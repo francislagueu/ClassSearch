@@ -1,6 +1,6 @@
 <form #myForm="ngForm" (ngSubmit) = "searchClass()"> 
 <div class="form-group">
- <!-- Goes all the way back to 2013 and includes summer classes. -->
+ <!-- Display terms, goes all the way back to 2013 and includes summer classes. -->
   <label for="term">Term: </label>
     <select id="term" 
           required
@@ -9,17 +9,56 @@
     </select>
 </div>
 
+<!-- Search logic -->
 <div class="form-group">
   <label for="searchStr">Search: </label>
     <input required type="text" name="searchStr"[(ngModel)]="searchStr" (keyup.enter)="searchClass()" class="form-control" placeholder="Search by class (e.g biol or biol-110)">
   </div>
 
+<!-- Submit button -->
     <div class="form-group"> 
     <button type="submit" >Search Class</button> 
   </div> 
 </form>
 
+<!-- Search results -->
 <div *ngIf="searchRes">
+
+<!-- Checkboxes for filtering days of the week -->
+  <div class="container">
+      <LABEL FOR="MON">Monday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="MON" Value="M" checked>
+      <LABEL FOR="TUES">Tuesday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="TUES" Value="T" checked>
+      <LABEL FOR="WED">Wednesday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="WED" Value="W" checked>
+      <LABEL FOR="THUR">Thursday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="THUR" Value="Th" checked>
+      <LABEL FOR="FRI">Friday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="FRI" Value="F" checked>
+      <LABEL FOR="SAT">Saturday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="SAT" Value="Sa" checked>
+      <LABEL FOR="SUN">Sunday</LABEL>
+      <INPUT TYPE="Checkbox" Name="Days[]" ID="SUN" Value="S" checked>
+  </div>
+
+  <div class="scrollbox">
+    <!-- <div *ngFor="let res2 of searchRes">
+          <input type="checkbox" checked> {{res2.instructors[0].instructor}} <br>
+      </div>
+      -->
+      <input type="checkbox" checked> Steven Fitzgerald<br>
+      <input type="checkbox" checked> Lucy Parker<br>
+      <input type="checkbox" checked> Li Liu<br>
+      <input type="checkbox" checked> Gloria Melara<br>
+      <input type="checkbox" checked> Jack Alanen<br>
+      <input type="checkbox" checked> Adam Kaplan<br>
+      <input type="checkbox" checked> Richard Lorentz<br>
+      <input type="checkbox" checked> John Noga<br>
+      <input type="checkbox" checked> Diane Schwartz<br>
+  </div>
+
+<!-- Display search  results -->
   <div *ngFor="let res of searchRes">
     <div class="row">
       <div class="col-md-12">
@@ -30,12 +69,13 @@
           <p>
             {{res.description}}
           </p>
-           <p> 
-             <strong>Instructor: </strong> {{res.instructors[0].instructor}} 
-          </p>
+          <!-- 
+          <p>
+            <strong>Instructor: </strong> {{res.instructors[0].instructor}} </p>
           <p>
             <strong>Meeting days: </strong>{{res.meetings[0].days}}
           </p>
+          -->
         </div>
 
       </div>
